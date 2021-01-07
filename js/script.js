@@ -11,6 +11,14 @@ function randomNumber(min, max) {
   return result;
 }
 
+function isPari(num) {
+  if(num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 
 if (userWord === pali(userWord)) {
   alert('palindroma');
@@ -38,16 +46,16 @@ if (userEvenOdd !== 'pari' && userEvenOdd !== 'dispari') {
   } else {
     var sum = userNumber + randomNumber(1, 5);
 
-    if (sum % 2 === 0 && flag === true) {
+    if (isPari(sum) && flag === true) {
       alert('hai vinto');
     }
-    if (sum % 2 === 0 && flag === false) {
+    if (isPari(sum) && flag === false) {
       alert('hai perso');
     }
-    if (sum % 2 !== 0 && flag === true) {
+    if (!isPari(sum) && flag === true) {
       alert('hai perso');
     }
-    if (sum % 2 !== 0 && flag === false) {
+    if (!isPari(sum) && flag === false) {
       alert('hai vinto');
     }
   }
