@@ -33,10 +33,10 @@ if (userEvenOdd !== 'pari' && userEvenOdd !== 'dispari') {
   alert('Scrivi solo o "pari" o "dispari"');
 } else {
   if (userEvenOdd === 'pari') {
-    flag === true;
+    flag = true;
   }
   if (userEvenOdd === 'dispari') {
-    flag === false;
+    flag = false;
   }
 
   var userNumber = prompt('Inserisci numero da 1 a 5');
