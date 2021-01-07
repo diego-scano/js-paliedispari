@@ -1,8 +1,8 @@
 var userWord = prompt('Inserisci parola');
 
 // funzioni
-function pali(word, reverse) {
-  reverse = word.split('').reverse('').join('');
+function pali(word) {
+  var reverse = word.split('').reverse('').join('');
   return reverse;
 }
 
@@ -19,7 +19,6 @@ if (userWord === pali(userWord)) {
 }
 
 var userEvenOdd = prompt('Scegli: pari o dispari?');
-var sum = 0;
 var flag;
 
 if (userEvenOdd !== 'pari' && userEvenOdd !== 'dispari') {
@@ -37,8 +36,8 @@ if (userEvenOdd !== 'pari' && userEvenOdd !== 'dispari') {
   if (isNaN(userNumber) && userNumber < 1 || userNumber > 5) {
     alert('Inserisci solamente un numero da 1 a 5');
   } else {
-    randomNumber(1, 5);
-    sum = userNumber + result;
+    var sum = userNumber + randomNumber(1, 5);
+
     if (sum % 2 === 0 && flag === true) {
       alert('hai vinto');
     }
